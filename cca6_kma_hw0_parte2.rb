@@ -1,5 +1,5 @@
-# Author: Carine Calixto Aguena
-# email: cca6@cin.ufpe.br
+# Author: Carine Calixto Aguena e Karina Moreira Azevedo
+# email: cca6@cin.ufpe.br e kma@cin.ufpe.br
 # date: 20-mai-2015
 
 #(a) Defina o método chamado hello(name) que recebe uma string representando um nome e retorna a string "Hello, " 

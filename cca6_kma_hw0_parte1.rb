@@ -1,5 +1,5 @@
 # Author: Carine Calixto Aguena e Karina Moreira Azevedo
-# email: cca6@cin.ufpe.br
+# email: cca6@cin.ufpe.br e kma@cin.ufpe.br
 # date: 20-mai-2015
 
 #a) Defina o método chamado sum que recebe um array de inteiros como argumento e retorna a soma dos seus elementos. 
