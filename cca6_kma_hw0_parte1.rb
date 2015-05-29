@@ -9,12 +9,14 @@ def sum(arr)
    if arr.empty?
        return soma
    else
-       arr.each { |x| soma += arr[x-1] }
+       arr.each do |x|
+        soma = soma + x
+   end
    end
    return soma
 end
 
-resultado = sum([1, 2, 3, 4, 5])
+resultado = sum([120, 2, 30, 4, 5])
 puts resultado
 
 
@@ -36,7 +38,7 @@ def max_2_sum(arr_int)
 
 end
 
-resultado2 = max_2_sum([])
+resultado2 = max_2_sum([10, 33, 20])
 puts resultado2
 
 #c)Defina o método chamado sum_to_n? que recebe um array de inteiros e um inteiro adicional (n) como argumentos e 
@@ -46,15 +48,16 @@ def sum_to_n?(array_int, n)
     if array_int.empty? || array_int.length == 1
         return false
     else
-        array_int.each do |x|
-                puts array_int[x-1]
-                if x < array_int.length && array_int[x-1] + array_int[x] == n 
-                    return true
+        for i in 0...array_int.length
+                for j in 0...array_int.length
+                    if array_int[i] + array_int[j] == n && array_int[i] != array_int[j]
+                        return true
+                    end
                 end
         end
     end
        return false 
 end
 
-bool = sum_to_n?([1, 2, 3, 4], 7)
+bool = sum_to_n?([1, 2, 10, 3, 15, 10], 20)
 puts bool
