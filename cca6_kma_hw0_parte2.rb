@@ -18,22 +18,12 @@ puts hello("Carine")
 
 def starts_with_consonant?(s)
     s.downcase!
-    char = s[0]
-    if /[a-w&&[^aeiou]]/.match(char)
+    if /[a-w&&[^aeiou]]/.match(s.chr)
         return true
     else
         return false
     end
 end
-
-puts starts_with_consonant?("arineguenarine")
-puts starts_with_consonant?("erineguenarine")
-puts starts_with_consonant?("irineguenarine")
-puts starts_with_consonant?("orineguenarine")
-puts starts_with_consonant?("urineguenarine")
-puts starts_with_consonant?("1arineguenarine")
-puts starts_with_consonant?("Carineguenarine")
-puts starts_with_consonant?("larineguenarine")
 
 
 #(c) Defina o método binary_multiple_of_4?(s) que recebe uma string e 
@@ -42,11 +32,11 @@ puts starts_with_consonant?("larineguenarine")
 def binary_multiple_of_4?(s) 
     
     if /[2-9]/.match(s)
-        false
+        return false
     elsif (s.to_i(2) % 4 == 0)
-        true
+        return true
     else
-        false
+        return false
     end
 
 end

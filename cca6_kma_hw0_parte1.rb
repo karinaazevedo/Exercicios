@@ -11,7 +11,7 @@ def sum(arr)
    else
        arr.each do |x|
         soma = soma + x
-   end
+        end
    end
    return soma
 end
@@ -50,7 +50,7 @@ def sum_to_n?(array_int, n)
     else
         for i in 0...array_int.length
                 for j in 0...array_int.length
-                    if array_int[i] + array_int[j] == n && array_int[i] != array_int[j]
+                    if array_int[i] + array_int[j] == n && i != j
                         return true
                     end
                 end
@@ -59,5 +59,5 @@ def sum_to_n?(array_int, n)
        return false 
 end
 
-bool = sum_to_n?([1, 2, 10, 3, 15, 10], 20)
+bool = sum_to_n?([1, 12, 2, 23, 44, 5, 52, 6, 74, 90], 164)
 puts bool

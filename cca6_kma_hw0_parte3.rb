@@ -39,4 +39,4 @@ end
 teste = BookInStock.new("fff",11.995545)
 
 
-puts "O livro de ISBN " + teste.getIsbn + " custa " + teste.price_as_string
+puts "O livro de ISBN " + teste.getIsbn + " caga " + teste.price_as_string
