@@ -13,19 +13,19 @@ class BookInStock
 
     end
     
-    def getIsbn
+    def isbn
         @isbn
     end
     
-    def getPrice
+    def price
         @price
     end
     
-    def setIsbn=(isbn)
+    def isbn=(isbn)
         @isbn = isbn
     end
     
-    def setPrice=(price)
+    def price=(price)
         @price = price
     end
     
