@@ -31,7 +31,7 @@ end
 #NOTA: esteja certo de que o método retorna false se a string não é um número binário válido!
 def binary_multiple_of_4?(s) 
     
-    if /[2-9]/.match(s)
+    if /[^01]/.match(s)
         return false
     elsif (s.to_i(2) % 4 == 0)
         return true
