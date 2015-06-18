@@ -31,6 +31,6 @@ class BookInStock
     
     def price_as_string 
         
-        "$" + ('%.02f' % getPreco).to_s
+        "$" + ('%.02f' % getPrice).to_s
     end
 end
