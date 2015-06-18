@@ -44,19 +44,25 @@ puts resultado2
 #c)Defina o método chamado sum_to_n? que recebe um array de inteiros e um inteiro adicional (n) como argumentos e 
 #retorna true se a soma de dois elementos distintos no array de inteiros seja igual a n. 
 #Um array vazio ou com somente um elemento deve retornar false.
-def sum_to_n?(array_int, n)
-    if array_int.empty? || array_int.length == 1
-        return false
+def sum_to_n?(a, n)
+    bool = false
+    if a.empty? || a.length == 1
+        bool = false
     else
-        for i in 0...array_int.length
-                for j in 0...array_int.length
-                    if array_int[i] + array_int[j] == n && i != j
-                        return true
-                    end
+        i = 0
+        while i <= a.length-1 do
+            num = a[i]
+            i +=1
+            j = i
+            while j <= a.length-1 do
+                if(num+a[j])==n
+                    bool = true
                 end
+                j += 1
+            end
         end
     end
-       return false 
+    return bool
 end
 
 bool = sum_to_n?([1, 12, 2, 23, 44, 5, 52, 6, 74, 90], 164)
