@@ -3,13 +3,13 @@
 # date: 20-mai-2015
 
 class BookInStock
-
-    def initialize(isbn, preco)
+    
+    def initialize(isbn, price)
         
-        raise ArgumentError, "O número ISBN ou o preço são inválidos"  if isbn.empty? || preco <= 0
+        raise ArgumentError, "O numero ISBN ou o preco sao invalidos"  if isbn.empty? || price <= 0
 
         @isbn = isbn
-        @preco = preco
+        @price = price
 
     end
     
@@ -17,26 +17,20 @@ class BookInStock
         @isbn
     end
     
-    def getPreco
-        @preco
+    def getPrice
+        @price
     end
     
     def setIsbn=(isbn)
         @isbn = isbn
     end
     
-    def setPreco=(preco)
-        @preco = preco
+    def setPrice=(price)
+        @price = price
     end
     
     def price_as_string 
         
         "$" + ('%.02f' % getPreco).to_s
     end
-
 end
-
-teste = BookInStock.new("fff",11.995545)
-
-
-puts "O livro de ISBN " + teste.getIsbn + " caga " + teste.price_as_string
